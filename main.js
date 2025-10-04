@@ -71,3 +71,5 @@ function displayBooks(list) {
     }) 
     
 }
+
+displayBooks(myLibrary);
