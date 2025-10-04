@@ -73,3 +73,20 @@ function displayBooks(list) {
 }
 
 displayBooks(myLibrary);
+
+const openDialog = document.querySelector("#openDialog");
+const dialog = document.querySelector("#addDialog");
+const form = document.querySelector("#addForm");
+
+openDialog.addEventListener("click", () => {
+    dialog.show();
+});
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    formEntries = Object.fromEntries(formData);
+
+    dialog.close();
+    form.reset();
+});
