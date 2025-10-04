@@ -62,11 +62,26 @@ function displayBooks(list) {
         let status = document.createElement("td");
         status.textContent = book.read ? "Read" : "Unread";
 
+        let actions = document.createElement("td");
+        actions.setAttribute("colspan", "2");
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.setAttribute("class", "delete");
+
+        const toggleBtn = document.createElement("button");
+        toggleBtn.textContent = "Toggle";
+        toggleBtn.setAttribute("class", "toggle");
+
+        actions.appendChild(deleteBtn);
+        actions.appendChild(toggleBtn);
+
         row.appendChild(number);
         row.appendChild(title);
         row.appendChild(author);
         row.appendChild(pages);
         row.appendChild(status);
+        row.appendChild(actions);
         tableBody.appendChild(row);
     }) 
     
