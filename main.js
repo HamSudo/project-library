@@ -89,4 +89,8 @@ form.addEventListener("submit", (e) => {
 
     dialog.close();
     form.reset();
+
+    addBookToLibrary(formEntries.title, formEntries.author, formEntries.pages, formEntries.status);
+    displayBooks(myLibrary);
 });
+
