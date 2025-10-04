@@ -89,9 +89,15 @@ displayBooks(myLibrary);
 const openDialog = document.querySelector("#openDialog");
 const dialog = document.querySelector("#addDialog");
 const form = document.querySelector("#addForm");
+const cancelBtn = document.querySelector("#cancelBtn");
 
 openDialog.addEventListener("click", () => {
     dialog.show();
+});
+
+cancelBtn.addEventListener("click", () => {
+    dialog.close();
+    form.reset();
 });
 
 form.addEventListener("submit", (e) => {
